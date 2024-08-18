@@ -1,5 +1,5 @@
 import { Link } from "expo-router";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   ScrollView,
   Text,
@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import GearRangeComponent from "./components/GearRangeComponent";
+import { Context } from "./_layout";
 
 const speedNumberCassetteArray = [
   "8 rzędowa",
@@ -19,6 +20,7 @@ const speedNumberCassetteArray = [
 ];
 
 function CalibrationSecondStepScreen() {
+  const [speedNumber, setSpeedNumber] = useContext(Context);
   const [selectedGearsNumber, setSelectedGearsNumber] = useState(0);
 
   const handleGearsNumber = (buttonValue) => {
@@ -44,6 +46,10 @@ function CalibrationSecondStepScreen() {
       default:
         return 0;
     }
+  };
+
+  const updateSpeedNumberGlobal = () => {
+    setSpeedNumber(handleSpeedNumber());
   };
 
   return (
@@ -81,7 +87,11 @@ function CalibrationSecondStepScreen() {
             <GearRangeComponent gearsNumber={handleSpeedNumber()} />
           </View>
           <TouchableOpacity className=" bg-blue rounded-3xl">
-            <Link href="/CalibrationThirdStepScreen" className="p-2">
+            <Link
+              href="/CalibrationThirdStepScreen"
+              className="p-2"
+              onPress={updateSpeedNumberGlobal()}
+            >
               <Text className="text-white">Przejdź do kolejnego etapu</Text>
             </Link>
           </TouchableOpacity>

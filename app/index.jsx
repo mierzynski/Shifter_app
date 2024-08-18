@@ -25,7 +25,7 @@ const CustomButton = ({ source, title, description, hrefDest }) => {
       <Link href={hrefsArray[hrefDest]} className="ml-2 active:opacity-50">
         <View className="ml-2">
           <Text className="text-white font-bold">{title}</Text>
-          <Text className="text-gray-400 text-xs">{description}</Text>
+          <Text className="text-gray_cassette text-xs">{description}</Text>
         </View>
       </Link>
     </TouchableOpacity>
