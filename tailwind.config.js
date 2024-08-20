@@ -9,6 +9,7 @@ module.exports = {
         gray_cassette: "#818181",
         blue: "#007aff",
         indigo: "#5856d6",
+        red: "#EC5959",
       },
     },
   },

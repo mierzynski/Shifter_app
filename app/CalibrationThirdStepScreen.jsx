@@ -30,9 +30,20 @@ function CalibrationThirdStepScreen() {
               1. Przetestuj zmianę biegów manualnie
             </Text>
             <CassetteAndButtonsComponent />
-            <TouchableOpacity className=" bg-blue rounded-3xl">
-              <Link href="/ConnectionScreen" className="p-2">
-                <Text className="text-white">Wróć do menu</Text>
+          </View>
+          <View className="flex-col justify-center items-center">
+            <TouchableOpacity className="mb-8 bg-blue rounded-full py-2 px-3">
+              <Link href="/menu" className="text-white">
+                Wróć do menu
+              </Link>
+            </TouchableOpacity>
+
+            <TouchableOpacity className="bg-red rounded-full py-2 px-3 w-[80%]">
+              <Link
+                href="/CalibrationManualScreen"
+                className="text-white text-center"
+              >
+                Chcę ręcznie ustawić pozycję wózka na każdym biegu
               </Link>
             </TouchableOpacity>
           </View>

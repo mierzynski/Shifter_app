@@ -81,6 +81,21 @@ export default function RootLayout() {
             title: "Kalibracja przerzutki",
           }}
         />
+        <Stack.Screen
+          name="CalibrationManualScreen"
+          options={{
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: "#1c1c1e",
+            },
+            headerTintColor: "#fff",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+            headerBackTitle: "etap 2/3",
+            title: "Kalibracja przerzutki",
+          }}
+        />
       </Stack>
     </Context.Provider>
   );
